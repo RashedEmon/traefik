@@ -1,0 +1,12 @@
+http:
+  routers:
+    router1:
+      rule: "Path(`/`)"
+      entryPoints:
+        - "web"
+      service: booking
+  services:
+    booking:
+      loadBalancer:
+        servers:
+          - url: "https://www.google.com/"
